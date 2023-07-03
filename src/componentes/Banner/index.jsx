@@ -18,3 +18,22 @@ export default function Banner() {
     </div>
   )
 }
+
+
+/*
+optei por manter o caminho padrão na seleção de import das fotos, mas caso queira incurtar esse caminho podemos utilizar uma configuração do react. 
+Primeiro passo é criar um documento no diretorio raiz chamado 'jsconfig.json', depois dentro do doc insira o seguinte código:
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+
+Isso basta para que nas importações o sistema entende que você vai importar a partir da pasta src ou qualquer outra que colocar no campo onde está src. 
+
+ficaria então para importar a imagem desse trecho 
+
+import foto from 'assets/circulo_colorido.png'
+
+*/
