@@ -15,11 +15,9 @@ export default function SobreMim() {
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita deleniti corrupti id veniam ab sapiente eos exercitationem aut commodi, aliquid praesentium fugiat repellendus ipsum totam magnam, vero eveniet, quae dolore.</p>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita deleniti corrupti id veniam ab sapiente eos exercitationem aut commodi, aliquid praesentium fugiat repellendus ipsum totam magnam, vero eveniet, quae dolore.</p>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita deleniti corrupti id veniam ab sapiente eos exercitationem aut commodi, aliquid praesentium fugiat repellendus ipsum totam magnam, vero eveniet, quae dolore.</p>
-
     </PostModelo>
     
       
-    
-    
+      
   )
 }
