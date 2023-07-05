@@ -2,6 +2,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import posts from "../../json/posts.json";
 import PostModelo from "componentes/PostModelo";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import './Post.css'
+import NaoEncontrada from "componentes/NaoEncontrada";
+
 
 
 export default function Post() {
@@ -10,13 +14,18 @@ export default function Post() {
     return post.id === +parametros.id;
   });
 
-  console.log(post);
+if(!post){
+  return(<NaoEncontrada/>)
+}
 
   return (
     <PostModelo
       fotoCapa={`../../posts/${post.id}/capa.png`}
       titulo={post.titulo}
-      children={post.texto}
-    ></PostModelo>
+    >
+      <div className="post-markdown-container">
+        <ReactMarkdown>{post.texto}</ReactMarkdown>
+      </div>
+    </PostModelo>
   );
 }
