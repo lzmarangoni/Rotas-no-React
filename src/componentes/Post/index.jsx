@@ -1,11 +1,22 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import { useParams } from "react-router-dom";
+import posts from "../../json/posts.json";
+import PostModelo from "componentes/PostModelo";
+
 
 export default function Post() {
-const parametros = useParams()
-console.log(parametros)
+  const parametros = useParams();
+  const post = posts.find((post) => {
+    return post.id === +parametros.id;
+  });
+
+  console.log(post);
 
   return (
-   <h1>Texto</h1>
-  )
+    <PostModelo
+      fotoCapa={`../../posts/${post.id}/capa.png`}
+      titulo={post.titulo}
+      children={post.texto}
+    ></PostModelo>
+  );
 }
