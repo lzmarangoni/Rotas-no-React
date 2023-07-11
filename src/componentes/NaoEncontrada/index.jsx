@@ -1,8 +1,12 @@
 import React from "react";
 import erro404 from "../../assets/erro_404.png";
 import styles from "./NaoEncontrada.module.scss";
+import BotaoPrincipal from "componentes/BotaoPrincipal";
+import { useNavigate } from "react-router-dom";
 
 export default function NaoEncontrada() {
+const navegar = useNavigate()
+
   return (
     <>
       <div className={styles.conteudoContainer}>
@@ -16,8 +20,15 @@ export default function NaoEncontrada() {
           Aguarde uns instantes e recarregue a página ou volte para página
           anterior{" "}
         </p>
+        <div className={styles.botaoContainer} onClick={()=> navegar(-1)}>
+          <BotaoPrincipal tamanho="lg">Voltar</BotaoPrincipal>
+        </div>
 
-        <img src={erro404} alt="Foto de cachorro usando oculos" />
+        <img
+          className={styles.imagemCachorro}
+          src={erro404}
+          alt="Foto de cachorro usando oculos"
+        />
       </div>
       <div className={styles.espacoEmBranco}></div>
     </>
